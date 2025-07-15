@@ -1,0 +1,300 @@
+/*
+    PerkyMod
+    mods.css
+    Copyright (C) 2025 WheatPole
+*/
+.perkyButton {
+  pointer-events: auto;
+	display: inline-block;
+	background-color: rgb(255, 111, 101);
+	color: white;
+	font-size: 1.3vw;
+	width: 15%;
+	height: 2.8vw;   
+}
+.perkyButton:hover {
+	background-color: rgb(223, 91, 82);
+}
+
+
+.perkyDiv {
+  pointer-events: none;
+  z-index: 0;
+    display: flex;
+    justify-content:right;
+    flex-direction: row;;
+    text-align: right;
+    bottom:0%;
+    right:0%;
+    position: fixed;
+    width: 100%;
+    padding: 1vw;
+}
+
+
+.perkyMain {
+  pointer-events: auto;
+  box-sizing: border-box;
+  color: #00263b;
+  margin: 0;
+  font: 1.1em/140% sans-serif;
+}
+
+.flexbox {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 1ex 0;
+}
+.filler {
+  flex: 1 0 0;
+}
+.centered {
+  display: block;
+  clear: both;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#applyPerksBtn {
+  background-color:rgb(84, 199, 84);
+  border-color: rgb(70, 172, 70);
+  margin-left: 0.6em;
+}
+
+.perk {
+  text-align: center;
+  overflow: hidden;
+  border: 1px solid #000;
+  margin: -1px;
+  padding: 0.6ex 0 0.4ex 0;
+  box-shadow: inset 0 0 1px #fff, 1px 1px 2px #000;
+  font-size: 1.1rem;
+  background: #666;
+  color: #fff;
+}
+#perks {
+  justify-content: center;
+}
+.perk:hover {
+  background: #535353;
+}
+.perk.capped {
+  background: #696980;
+}
+.perk.adding {
+  background: #809080;
+}
+.perk.remove {
+  background: #806969;
+}
+.perk.disabled {
+  background: #000000;
+}
+
+.perk.capped:hover {
+  background: #4a4a5e;
+}
+.perk.adding:hover {
+  background: #667466;
+}
+.perk.remove:hover {
+  background: #614e4e;
+}
+.perk.disabled:hover {
+  background: #000000;
+}
+
+.perk:not(.more) > .more {
+  display: none;
+}
+.perk.more {
+  line-height: 105%;
+}
+.perk.large {
+  width: 20%;
+}
+.perk.small {
+  width: 16.6666666666%;
+}
+.perk.tiny {
+  width: 14.2857142857%;
+}
+
+.perkyMain input[type="checkbox"] {
+  -webkit-appearance:checkbox;
+  -moz-appearance:checkbox;
+	appearance:checkbox;
+  position: relative;
+  top: 3px;
+}
+
+.perkyMain #details > * {
+  flex: 1 0;
+  align-self: center;
+  margin: 0 1em;
+}
+
+.perkyMain label {
+  display: block;
+  margin: 0.5ex 0;
+}
+.perkyMain table {
+  border-collapse: collapse;
+  text-align: center;
+  width: 100%;
+}
+
+.perkyMain input,
+select,
+textarea {
+  width: 50%;
+  margin: 0 0.5em;
+  padding: 0.5ex 0.5em;
+}
+
+.inputs {
+  height: 500px;
+  overflow-y: scroll;
+  overflow-x: none;
+}
+
+#disable {
+  text-align: center;;
+}
+
+/*.perkyMain > label {
+    display: flex;
+    flex-direction:column;
+    gap: 10px;
+}*/
+
+/*
+legend {
+  font-size: 1.3em;
+  background: linear-gradient(#ebf4fe, #fff);
+  color: #007bb3;
+}
+h1 {
+  color: #005c87;
+  text-align: center;
+  margin: 2ex 0 0 0;
+}
+input[type="range"],
+input[type="radio"],
+input[type="checkbox"] {
+  position: relative;
+  top: 3px;
+}
+.perkyMain > .lbl {
+  display: block;
+  margin: 0.5ex 0;
+}
+
+.perkyMain > input[disabled],
+.perkyMain > textarea[disabled] {
+  cursor: not-allowed;
+}
+.perkyMain > button,
+.perkyMain > .box {
+  background: #fff;
+  margin: 0 auto;
+  padding: 2ex 2em;
+  border: 1px solid #007bb3;
+  border-radius: 1ex;
+  box-shadow: 2px 2px 6px -2px #007bb3;
+}
+.perkyMain > .ok,
+.perkyMain > .warning,
+.perkyMain > .ko,
+.perkyMain > .info {
+  padding: 1ex 1em;
+  margin: 1em 2ex;
+  border: 1px solid #007bb3;
+  border-radius: 0.5ex;
+  background: #ebf4fe;
+  color: #005c87;
+  fill: #007bb3;
+  overflow-wrap: break-word;
+}
+.perkyMain > .ok {
+  filter: hue-rotate(270deg);
+}
+.perkyMain > .warning {
+  filter: hue-rotate(210deg);
+}
+.perkyMain > .ko {
+  filter: hue-rotate(150deg);
+}
+/*
+.tabs {
+  position: relative;
+}
+.tabs > :nth-child(1) {
+  cursor: pointer;
+  text-align: center;
+  text-decoration: underline;
+}
+.tabs > :nth-child(2) {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+.tabs > :nth-child(2):not(:checked) ~ * {
+  display: none;
+}
+
+.perkyMain > table,
+.perkyMain > th,
+.perkyMain > td {
+  border: 1px solid #000;
+  padding: 5px 3px 2px 3px;
+}
+.perkyMain > .align-right {
+  text-align: right;
+  padding-right: 1ex;
+}
+.perkyMain > #details > * {
+  flex: 1 0;
+  align-self: center;
+  margin: 0 1em;
+}
+.perkyMain > #perks {
+  justify-content: center;
+}
+.perk {
+  text-align: center;
+  overflow: hidden;
+  border: 1px solid #000;
+  margin: -1px;
+  padding: 0.6ex 0 0.4ex 0;
+  box-shadow: inset 0 0 1px #fff, 1px 1px 2px #000;
+  font-size: 1.05rem;
+  background: #666;
+  color: #fff;
+}
+.perk.capped {
+  background: #696980;
+}
+.perk.adding {
+  background: #809080;
+}
+.perk.remove {
+  background: #806969;
+}
+.perk:not(.more) > .more {
+  display: none;
+}
+.perk.more {
+  line-height: 105%;
+}
+.perk.large {
+  width: 20%;
+}
+.perk.small {
+  width: 16.6666666666%;
+}
+.perk.tiny {
+  width: 14.2857142857%;
+}
+*/
