@@ -35,7 +35,7 @@ var notations = [
 ];
 
 var last_perks = null;
-
+//
 function remove(elem) {
     elem.parentNode.removeChild(elem);
 }

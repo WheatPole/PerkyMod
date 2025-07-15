@@ -75,7 +75,7 @@ function applyPerkyPerks() {
       for (var i = 0; i < newPerks.length; i++) {
         var name = newPerks[i][0], diff = newPerks[i][1];
 
-        if (diff < 0)
+        if (diff < 0) 
           game.global.removingPerks = true;
         else if (diff > 0)
           game.global.removingPerks = false;
